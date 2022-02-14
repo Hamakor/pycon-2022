@@ -1,0 +1,42 @@
+{
+  "name": "il.pycon.org",
+  "description": "PyCon IL 2016 homepage",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp ci"
+  },
+  "author": "Edan Maor & Mikey Ariel",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.7.1",
+    "coffee-script": "^1.9.2",
+    "del": "^2.0.1",
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^2.2.0",
+    "gulp-awspublish": "^2.0.0",
+    "gulp-awspublish-router": "^0.1.1",
+    "gulp-bytediff": "^0.2.1",
+    "gulp-coffee": "^2.3.1",
+    "gulp-coffeelint": "^0.4.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-if-else": "^1.0.3",
+    "gulp-image-optimization": "^0.1.3",
+    "gulp-jade": "^1.0.0",
+    "gulp-minify": "0.0.5",
+    "gulp-minify-css": "^1.1.1",
+    "gulp-plumber": "^1.0.0",
+    "gulp-rev": "^3.0.1",
+    "gulp-rev-collector": "^0.1.4",
+    "gulp-rev-replace": "^0.4.2",
+    "gulp-s3": "^0.3.0",
+    "gulp-sass": "^2.0.0",
+    "gulp-scss-lint": "^0.1.12",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-util": "^3.0.4",
+    "jade": "^1.11.0",
+    "lazypipe": "^0.2.3",
+    "marked": "^0.3.5",
+    "run-sequence": "^1.1.0",
+    "yargs": "^3.8.0"
+  }
+}

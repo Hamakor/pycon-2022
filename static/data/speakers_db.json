@@ -1,0 +1,167 @@
+{
+  "1": {
+    "name": "Matti Picus",
+    "title": "What's new in PyPy and what will be next",
+    "avatar": "matti-picus.jpg"
+  },
+  "2": {
+    "name": "Sim Zacks",
+    "title": "Practical Metaclasses and Descriptors",
+    "avatar": "sim.jpg"
+  },
+  "3": {
+    "name": "Orsolya Vasarhelyi",
+    "title": "Network Analysis with Python",
+    "avatar": "orsolya-vasarhelyi.jpg"
+  },
+  "4": {
+    "name": "Anna Herlihy",
+    "title": "Wrestling Python into LLVM Intermediate Representation",
+    "avatar": "anna-herlihy.jpeg"
+  },
+  "5": {
+    "name": "John Schwarz",
+    "title": "Debugging Hung Python Processes With GDB",
+    "avatar": "john-schwarz.jpg"
+  },
+  "6": {
+    "name": "Jonathan Arfa",
+    "title": "Algorithms to Sample From Streams - Reservoir Sampling & Variants",
+    "avatar": "jonathan-arfa.jpg"
+  },
+  "7": {
+    "name": "Julian Berman",
+    "title": "Introduction to JSON Schema",
+    "avatar": "julian-berman.jpg"
+  },
+  "8": {
+    "name": "Eli Gur",
+    "title": "PyTest, the testing framework you've been dreaming of",
+    "avatar": "eli-gur.jpg"
+  },
+  "9": {
+    "name": "Ari Bornstein",
+    "title": "From Experimentation to Production: Pandas and Sci-Kit learn on Azure ML",
+    "avatar": "ari-bornstein.jpg"
+  },
+  "10": {
+    "name": "Uzi Halaby-Senerman",
+    "title": "Pandas - not just for data scientists",
+    "avatar": "uzi-halaby-senerman.jpg"
+  },
+  "11": {
+    "name": "Yoav Ram",
+    "title": "How to Study Evolution Using Scientific Python",
+    "avatar": "yoav-ram.jpg"
+  },
+  "12": {
+    "name": "Sagiv Malihi",
+    "title": "The Many Faces of Concurrency in Python",
+    "avatar": "sagiv-malihi.jpg"
+  },
+  "13": {
+    "name": "Ron Barak",
+    "title": "How to make Python perform like C",
+    "avatar": "ron-barak.jpg"
+  },
+  "14": {
+    "name": "Tamir Lousky",
+    "title": "Generating, automating and processing 3D graphics with Blender's python API",
+    "avatar": "tamir-lousky.jpg"
+  },
+  "15": {
+    "name": "Francesco Vollero",
+    "title": "Introduction to app development with OpenStack SDK",
+    "avatar": "francesco-vollero.jpg"
+  },
+  "16": {
+    "name": "Rony Sheer",
+    "title": "If They Build It… They will code...(lessons from a school coding club)",
+    "avatar": "rony-sheer.jpg"
+  },
+  "17": {
+    "name": "Eli Gur",
+    "title": "Type hints in Python",
+    "avatar": "eli-gur.jpg"
+  },
+  "18": {
+    "name": "Guillaume Binet",
+    "title": "Getting started with chatops in python with errbot",
+    "avatar": "guillaume-binet.jpg"
+  },
+  "19": {
+    "name": "Benny Bauer",
+    "title": "Python In The Serverless Era",
+    "avatar": "benny_bauer.jpg"
+  },
+  "20": {
+    "name": "To be announced",
+    "title": "To be announced",
+    "avatar": "default_male.png"
+  },
+  "21": {
+    "name": "Tom Zickel",
+    "title": "CPython byte-code and code-injection",
+    "avatar": "default_male.png"
+  },
+  "22": {
+    "name": "Benjamin Peterson",
+    "title": "Building Python with Bazel",
+    "avatar": "benjamin-peterson.jpg"
+  },
+  "23": {
+    "name": "Gabor Szabo",
+    "title": "Fight or Flight? - dealing with real world applications in Python",
+    "avatar": "gabor-szabo.jpg"
+  },
+  "24": {
+    "name": "Daniel Puterman",
+    "title": "Hacking the Selenium WebDriver",
+    "avatar": "daniel-puterman.jpg"
+  },
+  "25": {
+    "name": "Nati Cohen",
+    "title": "When Regular Expressions are Not Enough",
+    "avatar": "nati-cohen.jpg"
+  },
+  "26": {
+    "name": "Irina Gulina",
+    "title": "When Dependencies between Test Cases are Inevitable or How to test Image Instances in the Cloud",
+    "avatar": "irina-gulina.jpg"
+  },
+  "27": {
+    "name": "Jonathan Schemoul",
+    "title": "Python as a brain for your devices (web developement, hardware 'IoT', etc.)",
+    "avatar": "jonathan-schemoul.jpg"
+  },
+  "28": {
+    "name": "Aleš Dujíček",
+    "title": "Running upstream Spacewalk tests using Ansible and Vagrant",
+    "avatar": "ales.jpg"
+  },
+  "29": {
+    "name": "David Melamed",
+    "title": "Deep dive into threat detection in the cloud with Spark and Python",
+    "avatar": "david-melamed.png"
+  },
+  "30": {
+    "name": "Niv Mizrahi",
+    "title": "Packaging / dependecy hell in python",
+    "avatar": "niv-mizrahi.jpg"
+  },
+  "31": {
+    "name": "Ilia Meerovich",
+    "title": "Quick and robust CLI creation with Click module",
+    "avatar": "ilia-meerovich.jpg"
+  },
+  "32": {
+    "name": "Imri Goldberg",
+    "title": "Optimizing Latency",
+    "avatar": "imri-goldberg.jpg"
+  },
+  "33": {
+    "name": "Omer Nevo",
+    "title": "Poetry in Python: Using Markov Chains to Generate Texts",
+    "avatar": "omer-nevo.jpg"
+  }
+}

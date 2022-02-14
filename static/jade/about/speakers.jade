@@ -1,0 +1,73 @@
+extends ../base
+//- HIDE FOR NOW
+//- render single session
+
+mixin talk(session)
+  if session.title
+    .workshop
+      h3(id=crypto.createHash('sha1').update(session.title).digest("hex").substr(1,16))
+        = session.title
+        if session.name
+          small
+              |  by 
+          normal
+              = session.name
+
+            if session.slides
+                a.social.pdf(href='/'+year+"/static/sessions/" + session.slides, target="_blank")
+                    .fa.fa-file-pdf-o
+            if session.slidesother
+                a.social.pdf(href=session.slidesother, target="_blank")
+                    .fa.fa-link 
+
+      if session.avatar
+          img.avatar(src=avatar(session.avatar),alt='')
+      if session.avatar2
+          img.avatar(src=avatar(session.avatar2),alt='')
+
+      .misc
+        small
+          = session.time
+          if session.track
+              |  Track:
+              = session.track
+
+      if session.bio
+          h4 Bio
+              if session.github
+                  a.social.github(href="https://github.com/" + session.github)
+                      .fa.fa-github
+              if session.twitter
+                  a.social.twitter(href="https://twitter.com/" + session.twitter)
+                      .fa.fa-twitter
+          != md(session.bio)
+
+      if session.bio2
+          h4 Bio 
+              if session.github2
+                  a.social.github(href="https://github.com/" + session.github2)
+                      .fa.fa-github
+              if session.twitter2
+                  a.social.twitter(href="https://twitter.com/" + session.twitter2)
+                      .fa.fa-twitter
+          != md(session.bio2)
+
+      if session.abstract
+          h4 Abstract
+          != md(session.abstract)
+
+block vars
+  - var pageClass = "page-workshops"
+  - var activePage = "workshops"
+
+block viewport
+  .container
+    h1 Session details
+    b All slides linked in this page are published under CC-BY v4.0 license unless specifically stated otherwise.
+
+    //-  Iterate over session objects (loaded in gulpfile from data/sessions.json)
+    //-  and render mixin talk() (see above)
+    each session, index in sessions
+      +talk(session[0])
+      +talk(session[1])
+  

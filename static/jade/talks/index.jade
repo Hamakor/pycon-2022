@@ -1,0 +1,272 @@
+extends ../base
+
+mixin talk(speaker, time)
+  .talk-description
+    h3.speaker
+      = speaker.name
+
+    .misc
+      small= time
+      // small.track
+        // = speaker.track
+        // |  branch
+      // a.social.github(href="https://github.com/" + speaker.github)
+        // .fa.fa-github
+      if speaker.twitterName
+        a.social.twitter(href="https://twitter.com/" + speaker.twitterName)
+          .fa.fa-twitter
+
+    p
+      a(href=pageUrl("about/speakers.html#"+crypto.createHash('sha1').update(speaker.title).digest('hex').substr(1,16)))
+         = speaker.title
+    
+  .commit-holder
+    .commit
+      img.avatar(src=avatar(speaker.avatar), alt='Photo of ' + speaker.name)
+
+mixin in_track_title(title, time, image)
+  .talk-description
+    h3.speaker
+      = title
+
+    .misc
+      small= time
+      // small.track
+        // = speaker.track
+        // |  branch
+      // a.social.github(href="https://github.com/" + speaker.github)
+        // .fa.fa-github
+
+  .commit-holder
+    .commit
+      img.avatar(src=avatar(image), alt='Photo of ' + 'test')
+
+
+mixin branch-out()
+  .branch.out
+    img(
+      src="/2016/static/images/ui/branch-out.svg",
+      onerror="this.onerror = null; this.src = '/2016/static/images/ui/branch-out.png'"
+    )
+
+mixin branch-in()
+  .branch.in
+    img(
+      src="/2016/static/images/ui/branch-in.svg",
+      onerror="this.onerror = null; this.src = '/2016/static/images/ui/branch-in.png'"
+    )
+
+
+
+mixin day-schedule-loop(day)
+    each event in schedule_db[day]
+      if event.obj_type == "track_names"
+        .branch-description
+          .branch-name
+            .master= event.track_1_name
+
+          +branch-in()
+
+          .branch-name
+            .practical= event.track_2_name
+
+      else if event.obj_type == "2-tracks"
+        - var time = event.time
+        - var track_1 = event["track_1"]
+        - var track_2 = event["track_2"]
+        .talk-block
+          .event.master
+            if track_1.obj_type == "talk"
+              +talk(speakers_db[track_1.speaker_id], time)
+              // p= track_1.speaker_id
+            else if track_1.obj_type == "title"
+              +in_track_title(track_1.title, time, track_1.avatar)
+
+          .event.practical
+            if track_2.obj_type == "talk"
+              +talk(speakers_db[track_2.speaker_id], time)
+              // p= track_1.speaker_id
+            else if track_2.obj_type == "title"
+              +in_track_title(track_2.title, time, track_2.avatar)
+      else if event.obj_type == "branch_out"
+        +branch-out()
+      else if event.obj_type == "event-full"
+        .event-full
+          h2.title #{event.title} #[small #{event.time}]
+          .talk-description
+            p.
+              #{event.description}
+          
+          if event.last
+            .commit.empty.last
+              .dot
+          else
+            .commit.empty
+              .dot
+
+block vars
+  - var pageClass = "page-talks"
+  - var activePage = "talks"
+  - var keyNoteTitle1 = "Scaling PyData Up and Out with Anaconda"
+  - var keyNoteTitle2 = "Growing Community That Makes a Difference"
+  - var keyNoteTitle3 = "Topic to be announced"
+  - var keyNoteId1 = crypto.createHash('sha1').update("Keynotes: "+keyNoteTitle1).digest("hex").substr(1,16)
+  - var keyNoteId2 = crypto.createHash('sha1').update("Keynotes: "+keyNoteTitle2).digest("hex").substr(1,16)
+  - var keyNoteId3 = crypto.createHash('sha1').update("Keynotes session").digest("hex").substr(1,16)
+  
+block viewport
+  .container
+    h1 Agenda &amp; Tracks
+
+    h2.day-title Day 1 (May 2nd)
+
+    .event-full.general
+      h2.title Arrival + Snacks #[small 9:00]
+      .talk-description
+        p.
+          Grab your swag bag and coffee. #[br]
+          Meet our sponsors and get ready for a day full of awesome talks!
+      
+      .commit.empty.first
+        .dot
+
+    .event-full.general
+      h2.title The grand opening #[small 9:30]
+      .talk-description
+        p.
+          Welcome to the first #[strong PyCon IL]! #[br]
+          Proud to bring great talks and speakers, both from Israel and abroad.
+      
+      .commit.empty
+        .dot
+    
+
+    .event-full
+      h2.title.travis. 
+        Keynote #1 #[br]
+        <span class="keynote-text">
+          #[a(href=pageUrl("about/speakers.html##{keyNoteId1}")) #{keyNoteTitle1}] #[small 9:45]
+        </span>
+      .talk-description
+        .speaker Travis Oliphant
+        p.
+            CEO of Continuum Analytics, NumFOCUS founder, NumPy, SciPy and 
+            Numba creator.
+        a.social.github(href="https://github.com/teoliphant")
+          .fa.fa-github
+        a.social.twitter(href="https://twitter.com/teoliphant")
+          .fa.fa-twitter
+         
+      .commit
+        img.avatar(
+          src=avatar("travis.jpg"),
+          alt='Photo of Travis Oliphant'
+        )
+
+    .event-full
+      h2.title.olas.
+        Keynote #2 #[br]
+        <span class="keynote-text">
+          #[a(href=pageUrl("about/speakers.html##{keyNoteId2}")) #{keyNoteTitle2}] #[small 10:30]
+        </span>
+      .talk-description
+        .speaker Ola Sendecka
+        p. 
+          Co-founder of Django Girls, part of Django Core Team, author of 
+          #[a(href="https://www.youtube.com/channel/UC0hNd2uW8jTR5K3KBzRuG2A") "Coding is for Girls"]
+          YouTube Channel. Works at Potato.
+
+        //- a.social.github(href="https://twitter.com/asendecka")
+          //- .fa.fa-github
+        a.social.twitter(href="https://twitter.com/asendecka")
+          .fa.fa-twitter
+         
+      .commit
+        img.avatar(
+          src=avatar("ola_sendecka.jpg"),
+          alt='Photo of Ola Sendecka'
+        )
+
+    .event-full
+      h2.title.olas 
+      .talk-description
+        .speaker Ola Sitarska
+        p.
+          Co-founder of Django Girls, part of Django Core Team, board member of
+          Django Software Foundation, Senior Developer at Potato.
+
+        a.social.github(href="https://github.com/olasitarska")
+          .fa.fa-github
+        a.social.twitter(href="https://twitter.com/olasitarska")
+          .fa.fa-twitter
+         
+      .commit
+        img.avatar(
+          src=avatar("ola_sitarska.jpg"),
+          alt='Photo of Ola Sitarska'
+        )
+
+    .event-full.general
+      h2.title Break #[small 11:15]
+      .talk-description
+        p.
+            #[br] Moving into two separate tracks.
+      
+      .commit.empty
+        .dot
+    
+
+    // Edan new code...
+    +day-schedule-loop("day_1")
+
+    h2.day-title Day 2 (May 3rd)
+
+    .event-full.general
+      h2.title Arrival + Snacks #[small 9:00]
+      .talk-description
+        p.
+          Grab your swag bag and coffee, if you don't have it yet!
+      
+      .commit.empty.first
+        .dot
+
+    .event-full.general
+      h2.title Welcome to Day 2! #[small 9:25]
+      .talk-description
+        p.
+      
+      .commit.empty
+        .dot
+
+    .event-full
+      h2.title.raymond.
+        Keynote #3 #[br] 
+        <span class="keynote-text">
+          #[a(href=pageUrl("about/speakers.html##{keyNoteId3}")) #{keyNoteTitle3}] #[small 9:30]
+        </span>
+      .talk-description
+        .speaker Raymond Hettinger
+        p.
+            Python core developer for 14 years. Creator of the collections 
+            module and itertools module.
+        a.social.github(href="https://github.com/raymondh")
+          .fa.fa-github
+        a.social.twitter(href="https://twitter.com/raymondh")
+          .fa.fa-twitter
+         
+      .commit
+        img.avatar(
+          src=avatar("raymond.jpg"),
+          alt='Photo of Raymond Hettinger'
+        )
+
+    .event-full.general
+      h2.title Break #[small 10:15]
+      .talk-description
+        p.
+            #[br] Moving into two separate tracks.
+      
+      .commit.empty
+        .dot
+
+    +day-schedule-loop("day_2")

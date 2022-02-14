@@ -1,0 +1,169 @@
+extends base
+
+block vars
+  - var pageClass = "home"
+
+block viewport
+  .pycon
+    img.pycon-logo(
+      alt="PyCon IL",
+      src='/'+year+"/static/images/pycon-il-logo-new.png",
+      onerror="this.onerror = null; this.src = '/2016/static/images/pycon-il-logo-new.png'"
+    )
+
+    h1(style='font-family:arial; font-size: 64px; padding-right: 14px;')
+      | PyCon Israel 2016
+
+    .pycon-info(style='font-family:arial; font-size: 56px; padding-right: 14px;')
+      p.pycon-location Tel Aviv, Israel
+      p.pycon-date May 2-3
+
+  .claim
+    .container
+      p.
+        The very first #[strong PyCon] in #[strong Israel]. Join us
+        for a 2-day, 2-track event of learning, socializing, and fun,
+        all about the #[strong Python] programming language
+
+  .container
+    .program
+      .program-item
+        h2 Registration
+        //- p.lead.
+          //- Registration is now open! #[a(href="https://ti.to/pycon-israel/pycon-israel-2016 ") Get your tickets here].
+        p.lead.
+          PyCon IL tickets are sold out
+
+        //- There are no more tickets available for this year's conference.
+        p.
+          PyCon Israel has sold out, in record time!
+          #[a(href="https://medium.com/@pyconil/pycon-israel-tickets-are-sold-out-a745fbbd6d42#.owlzqgg1m") Unfortunately, we are unable to add any more tickets at this time.]
+
+        p.
+          You can #[a(href="https://ti.to/pycon-israel/pycon-israel-2016 ") sign up to our list] and be notified of PyCon news. 
+          We'd love to see you in next year's PyCon!
+
+        p.
+          If you have any questions, contact us directly at #[a(href="mailto:info@pycon.org.il") info@pycon.org.il]
+
+      .program-item
+        h2 Become a Speaker
+        p.lead.
+          The CFP is now closed
+
+        p.
+          We are overwhelmed by the tremendous enthusiasm from the Israeli Python community!
+
+        p.
+          We are reviewing the CFPs now, and will announce the full PyCon IL agenda in the coming weeks.
+
+        p. 
+          Stay tuned on the site and in the blog to be notified of news.
+
+    .location
+      h2(align='center') Location
+      p(align='center', style='font-size: 24px;').
+        The conference will take place in the Ayalon Mall, at the Yes Planet cinema complex.
+      .venue(align='center')
+        i.fa.fa-map-marker
+        span.
+          #[a(href="https://goo.gl/maps/qvZwf6Ju3Wq") Yes Planet, Ayalon Mall, Ramat Gan]
+
+    .contact-us
+      h2 Contact Us 
+      p.lead.
+        Need to contact PyCon IL staff? Send a mail to #[a(href="mailto:info@pycon.org.il") info@pycon.org.il] and we'll get back to you ASAP.
+        
+    .djangogirls
+      h2 Django Girls
+      p.lead.
+        Join the very first #[a(href="https://djangogirls.org/telavivjaffa") Django Girls Tel Aviv-Jaffa] workshop on May 1st!
+
+    .sponsors
+      h2 Sponsors
+      p.lead. 
+        Would you like to support PyCon Israel? #[a(href="mailto:info@pycon.org.il") Send us an email] and join us as a sponsor!
+
+      .diamond
+        h3 Diamond sponsors
+        .sponsor
+          a(href="https://www.redhat.com/en/global/israel ")
+            img(src=pageUrl("static/images/sponsors/redhat_resized.png"))
+
+        .sponsor
+          a(href="http://www.cymmetria.com")
+            img(src=pageUrl("static/images/sponsors/cymmetria.jpg"))
+
+      .gold
+        h3 Gold sponsors
+        .sponsor
+          a.sponsor-psf(href="http://xtremio.com/")
+            img(src=pageUrl("static/images/sponsors/xtremio.png"))
+        .sponsor
+          a.sponsor-psf(href="http://www.autodeskrnd.co.il/")
+            img(src=pageUrl("static/images/sponsors/autodesk.png"))
+
+      .silver
+        h3 Silver sponsors
+        .sponsor
+          a.sponsor-imper(href="http://www.sentinelone.com")
+            img(src=pageUrl("static/images/sponsors/sentinel_one.png"))
+
+        .sponsor
+          a.sponsor-psf(href="http://www.dropbox.com")
+            img(src=pageUrl("static/images/sponsors/dropbox.png"))
+
+        .sponsor
+          a.sponsor-psf(href="http://weare.cisco.com/")
+            img(src=pageUrl("static/images/sponsors/cisco.png"))
+
+        .sponsor
+          a.sponsor-psf(href="http://getcloudify.org")
+            img(src=pageUrl("static/images/sponsors/cloudify.png"))
+
+      .bronze
+        h3 Bronze sponsors
+        .sponsor
+          a.sponsor-imper(href="https://www.hpe.com/il/en/home.html")
+            img(src=pageUrl("static/images/sponsors/hpe.png"))
+
+        .sponsor
+          a.sponsor-imper(href="http://www.applitools.com")
+            img(src=pageUrl("static/images/sponsors/applitools.png"))
+
+        .sponsor
+          a.sponsor-imper(href="https://www.python.org/psf/")
+            img(src=pageUrl("static/images/sponsors/psf.png"))
+
+        .sponsor
+          a.sponsor-imper(href="http://www.adgorithms.com")
+            img(src=pageUrl("static/images/sponsors/adgorithms.png"))
+
+    .cancellation
+      hr(width="75%", align="center")
+      h3(align='center') Cancellation policy
+      p.
+        Registration cancellations must be submitted in writing to info@pycon.org.il. Refund amount is based on the dates your cancellation has been received and acknowledged in the following way:
+      ul#books
+        li.
+          Cancellation received by April 8: 100% refund.
+        li.
+          Cancellation received by April 21: 80% refund.
+      p.
+        Due to local holidays this year we won’t be able process cancellation requests post April 21st, and therefore there will be no refund after this date.
+
+    .news
+      .line
+      hr(width="75%", align="center")
+      h2(align="center") Social Media Live Feed
+      table(width="100%", cellpadding="1000", cellspacing="100", border="0", align="center")
+        tr
+          td(width="45%", valign="top")
+            a.twitter-timeline(href='https://twitter.com/search?q=pyconil', data-widget-id='707326560232153088', data-chrome="nofooter noheader") Tweets about pyconil
+            script.
+              !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+          td(width="45%", valign="top")
+            .fb-page(data-href='https://www.facebook.com/pyconisrael', data-tabs='timeline', data-small-header='false', data-adapt-container-width='true', data-hide-cover='false', data-show-facepile='true', data-width='500', data-height='600')
+              .fb-xfbml-parse-ignore
+                blockquote(cite='https://www.facebook.com/pyconisrael')
+                  a(href='https://www.facebook.com/pyconisrael') PyCon Israel

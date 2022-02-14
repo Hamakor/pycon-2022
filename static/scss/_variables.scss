@@ -1,0 +1,40 @@
+@import "bootstrap/variables";
+
+// Grid
+
+$grid-gutter-width: 20px;
+$container-desktop: (940px + $grid-gutter-width);
+$container-large-desktop: $container-desktop;
+$container-lg: $container-desktop;
+$container-md: $container-desktop;
+$screen-lg: $screen-md;
+
+// Color theme
+
+$twitter-color: #55acee;
+$github-color: #333;
+$pdf-color: #FF0000;
+
+$brand-primary: #1e5493;
+/* $brand-secondary: #d52034; */
+$brand-secondary: #c65b2e;
+$brand-silent: #d1d1d1;
+
+$text-color: #646464;
+$text-inverted: #fff;
+
+$commit-line: #dfdfdf;
+
+$bg: #fff;
+$navbar-bg: rgba(255, 255, 255, 0.97);
+
+// Dimensions
+
+$navbar-height: 60px;
+$footer-height: 350px;
+$offcanvas-navbar-width: 230px;
+$images-size: 96px;
+
+// Theme overrides
+
+$font-size-base: 16px;

@@ -1,0 +1,100 @@
+include ../components/vars
+block vars
+
+doctype html
+html(lang='he-il' dir='rtl')
+  head
+    block title
+      title= "PyCon ישראל " + year
+
+    //- base(href='/'+year+'/he/')
+    base(href='/'+year+'/')
+
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='keywords', content='Python, PyCon, Django, conference, Israel, Tel Aviv')
+    meta(name='description', content='כנס PyCon הראשון בישראל!')
+
+    // favicon for every possible option...
+    link(rel="apple-touch-icon", sizes="57x57", href="/"+year+"/static/images/apple-touch-icon-57x57.png")
+    link(rel="apple-touch-icon", sizes="60x60", href="/"+year+"/static/images/apple-touch-icon-60x60.png")
+    link(rel="apple-touch-icon", sizes="72x72", href="/"+year+"/static/images/apple-touch-icon-72x72.png")
+    link(rel="apple-touch-icon", sizes="76x76", href="/"+year+"/static/images/apple-touch-icon-76x76.png")
+    link(rel="apple-touch-icon", sizes="114x114", href="/"+year+"/static/images/apple-touch-icon-114x114.png")
+    link(rel="apple-touch-icon", sizes="120x120", href="/"+year+"/static/images/apple-touch-icon-120x120.png")
+    link(rel="apple-touch-icon", sizes="144x144", href="/"+year+"/static/images/apple-touch-icon-144x144.png")
+    link(rel="apple-touch-icon", sizes="152x152", href="/"+year+"/static/images/apple-touch-icon-152x152.png")
+    link(rel="apple-touch-icon", sizes="180x180", href="/"+year+"/static/images/apple-touch-icon-180x180.png")
+    link(rel="icon", type="image/png", href="/"+year+"/static/images/favicon-32x32.png", sizes="32x32")
+    link(rel="icon", type="image/png", href="/"+year+"/static/images/favicon-194x194.png", sizes="194x194")
+    link(rel="icon", type="image/png", href="/"+year+"/static/images/favicon-96x96.png", sizes="96x96")
+    link(rel="icon", type="image/png", href="/"+year+"/static/images/android-chrome-192x192.png", sizes="192x192")
+    link(rel="icon", type="image/png", href="/"+year+"/static/images/favicon-16x16.png", sizes="16x16")
+    link(rel="manifest", href="/"+year+"/static/images/manifest.json")
+    link(rel="mask-icon", href="/"+year+"/static/images/safari-pinned-tab.svg", color="#5bbad5")
+    link(rel="shortcut icon", href="/"+year+"/static/images/favicon.ico")
+    meta(name="apple-mobile-web-app-title", content="PyCon Israel")
+    meta(name="application-name", content="PyCon Israel")
+    meta(name="msapplication-TileColor", content="#da532c")
+    meta(name="msapplication-TileImage", content="/"+year+"/static/images/mstile-144x144.png")
+    meta(name="msapplication-config", content="/"+year+"/static/images/browserconfig.xml")
+    meta(name="theme-color", content="#ffffff")
+
+    //if lt IE 9
+      script(src='https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js')
+    link(href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css', rel='stylesheet')
+    link(href='/'+year+'/static/css/pyconcz.css', rel='stylesheet')
+
+    script(src='https://js.tito.io/v1', async)
+    link(rel="stylesheet", type="text/css", href='https://css.tito.io/v1')
+
+    //- Facebook Meta
+    meta(property="og:title",       content="PyCon IL 2016" )
+    meta(property="og:site_name",   content="il.pycon.org" )
+    meta(property="og:description", content="The first PyCon in Israel!" )
+    meta(property="og:image",       content=urlBase + year + "/static/images/pycon-il-logo-fb.png" )
+    meta(property="og:url",         content=urlBase + year + "/")
+    meta(property="og:type",        content="website" )
+
+  body(class=pageClass, ontouchstart="")
+
+    #fb-root
+    script.
+      (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/he_IL/sdk.js#xfbml=1&version=v2.5";
+      fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+
+    include components/navbar
+    .canvas
+      .overlay
+      .viewport
+        block viewport
+
+      include components/footer
+    include ../components/js
+    
+    script(type="text/javascript").
+      function closeNavbar() {
+        $closer.unbind();
+        $body.toggleClass("open");
+      }
+      
+      var $body = $('body');
+      var $closer = $('.viewport, .canvas, .navbar a');
+      
+      $('.navbar-toggle-rtl').click(function(ev) {
+        ev.preventDefault();
+        
+        if ($body.hasClass('open')) {
+          closeNavbar();
+        } else {
+          $body.toggleClass("open");
+          $closer.click(function(ev) {
+            closeNavbar();
+          })
+        }
+      });

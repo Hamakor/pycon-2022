@@ -1,0 +1,43 @@
+header#top
+  .navbar
+    button.navbar-toggle(type="button", aria-expanded="false")
+      .fa.fa-bars
+
+    ul.nav.navbar-nav
+      li.about
+        a(href=pageUrl("#")) About
+      //- li.getting-here(class=activePage == "getting-here" ? "active" : "")
+        a(href=pageUrl("getting-here/")) Getting Here
+      //- li.tickets
+      //-   a(href=pageUrl("about/pycontest.html"))
+      //-     | #PyConTest
+      //- li.videos
+        a(href="http://www.superlectures.com/pycon2015/")
+          | Videos
+      li.talks(class=activePage == "talks" ? "active" : "")
+        a(href=pageUrl("talks/"))
+          | Agenda
+      li.speakers(class=activePage == "speakers" ? "active" : "")
+        a(href=pageUrl("about/speakers.html"))
+          | Sessions
+      li.blog
+        a(href="about/code-of-conduct.html")
+          | Code of Conduct
+      li.blog
+        a(href="https://medium.com/@pyconil/")
+          | Blog
+      li.blog
+        a(href=pageUrl("he/"))
+          | עברית
+          //- span.date Saturday 14th
+      //- li.sprints(class=activePage == "workshops" ? "active" : "")
+        a(href=pageUrl("workshops/"))
+          | Sprints &amp; workshops
+          span.date Sunday 15th
+    
+    //- a(href="/2016/")
+      //- img.pycon-logo(
+        //- alt="PyCon IL",
+        //- src='/'+year+"/static/images/pycon-il-logo-icon.svg",
+        //- onerror="this.onerror = null; this.src = '/2016/static/images/pycon-il-logo.png'"
+      //- )

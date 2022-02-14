@@ -1,0 +1,292 @@
+{
+  "day_1": 
+  [
+    {
+      "obj_type": "track_names",
+      "track_1_name": "dev & core track",
+      "track_2_name": "Data, SCI & ML track"
+    },
+    {
+      "obj_type": "2-tracks",
+      "time": "11:30",
+      "track_1": {
+        "obj_type": "talk",
+        "speaker_id": 1
+      },
+      "track_2": {
+        "obj_type": "talk",
+        "speaker_id": 3
+      }
+    },
+    {
+      "obj_type": "2-tracks",
+      "time": "12:00",
+      "track_1": {
+        "obj_type": "talk",
+        "speaker_id": 2
+      },
+      "track_2": {
+        "obj_type": "talk",
+        "speaker_id": 4
+      }
+    },
+    {
+      "obj_type": "2-tracks",
+      "time": "12:30",
+      "track_1": {
+        "obj_type": "title",
+        "title": "Lunch Break",
+        "avatar": "lunchbox.png"
+      },
+      "track_2": {
+        "obj_type": "title",
+        "title": "Lunch Break",
+        "avatar": "lunchbox.png"
+      }
+    },
+    {
+      "obj_type": "2-tracks",
+      "time": "13:30",
+      "track_1": {
+        "obj_type": "talk",
+        "speaker_id": 5
+      },
+      "track_2": {
+        "obj_type": "talk",
+        "speaker_id": 6
+      }
+    },
+    {
+      "obj_type": "2-tracks",
+      "time": "14:00",
+      "track_1": {
+        "obj_type": "talk",
+        "speaker_id": 7
+      },
+      "track_2": {
+        "obj_type": "talk",
+        "speaker_id": 10
+      }
+    },
+    {
+      "obj_type": "2-tracks",
+      "time": "14:30",
+      "track_1": {
+        "obj_type": "talk",
+        "speaker_id": 8
+      },
+      "track_2": {
+        "obj_type": "talk",
+        "speaker_id": 9
+      }
+    },
+    {
+      "obj_type": "2-tracks",
+      "time": "15:00",
+      "track_1": {
+        "obj_type": "title",
+        "title": "Coffee Break",
+        "avatar": "coffee.png"
+      },
+      "track_2": {
+        "obj_type": "talk",
+        "speaker_id": 11
+      }
+    },
+    {
+      "obj_type": "2-tracks",
+      "time": "15:30",
+      "track_1": {
+        "obj_type": "talk",
+        "speaker_id": 12
+      },
+      "track_2": {
+        "obj_type": "title",
+        "title": "Coffee Break",
+        "avatar": "coffee.png"
+      }
+    },
+    {
+      "obj_type": "2-tracks",
+      "time": "16:00",
+      "track_1": {
+        "obj_type": "talk",
+        "speaker_id": 13
+      },
+      "track_2": {
+        "obj_type": "talk",
+        "speaker_id": 33
+      }
+    },
+    {
+      "obj_type": "2-tracks",
+      "time": "16:30",
+      "track_1": {
+        "obj_type": "talk",
+        "speaker_id": 15
+      },
+      "track_2": {
+        "obj_type": "talk",
+        "speaker_id": 16
+      }
+    },
+    {
+      "obj_type": "branch_out"
+    },
+    {
+      "obj_type": "event-full",
+      "time": "17:30",
+      "title": "After Party",
+      "description": ""
+    },
+    {
+      "obj_type": "event-full",
+      "time": "18:45",
+      "title": "Captain America: Civil War",
+      "description": "Our surprise is - a conference-wide screening of Captain America: Civil War, the just-released new Marvel Universe movie getting rave reviews!",
+      "last": true
+    }
+  ],
+  "day_2": 
+  [
+    {
+      "obj_type": "track_names",
+      "track_1_name": "dev & core track",
+      "track_2_name": "Devops track"
+    },
+    {
+      "obj_type": "2-tracks",
+      "time": "10:30",
+      "track_1": {
+        "obj_type": "talk",
+        "speaker_id": 17
+      },
+      "track_2": {
+        "obj_type": "talk",
+        "speaker_id": 18
+      }
+    },
+    {
+      "obj_type": "2-tracks",
+      "time": "11:00",
+      "track_1": {
+        "obj_type": "talk",
+        "speaker_id": 19
+      },
+      "track_2": {
+        "obj_type": "talk",
+        "speaker_id": 31
+      }
+    },
+    {
+      "obj_type": "2-tracks",
+      "time": "11:30",
+      "track_1": {
+        "obj_type": "talk",
+        "speaker_id": 21
+      },
+      "track_2": {
+        "obj_type": "talk",
+        "speaker_id": 22
+      }
+    },
+    {
+      "obj_type": "2-tracks",
+      "time": "12:00",
+      "track_1": {
+        "obj_type": "talk",
+        "speaker_id": 23
+      },
+      "track_2": {
+        "obj_type": "talk",
+        "speaker_id": 24
+      }
+    },
+    {
+      "obj_type": "2-tracks",
+      "time": "12:30",
+      "track_1": {
+        "obj_type": "title",
+        "title": "Lunch Break",
+        "avatar": "lunchbox.png"
+      },
+      "track_2": {
+        "obj_type": "title",
+        "title": "Lunch Break",
+        "avatar": "lunchbox.png"
+      }
+    },
+    {
+      "obj_type": "2-tracks",
+      "time": "13:30",
+      "track_1": {
+        "obj_type": "talk",
+        "speaker_id": 25
+      },
+      "track_2": {
+        "obj_type": "talk",
+        "speaker_id": 26
+      }
+    },
+    {
+      "obj_type": "2-tracks",
+      "time": "14:00",
+      "track_1": {
+        "obj_type": "talk",
+        "speaker_id": 27
+      },
+      "track_2": {
+        "obj_type": "talk",
+        "speaker_id": 28
+      }
+    },
+    {
+      "obj_type": "2-tracks",
+      "time": "14:30",
+      "track_1": {
+        "obj_type": "talk",
+        "speaker_id": 29
+      },
+      "track_2": {
+        "obj_type": "talk",
+        "speaker_id": 30
+      }
+    },
+    {
+      "obj_type": "2-tracks",
+      "time": "15:00",
+      "track_1": {
+        "obj_type": "title",
+        "title": "Coffee Break",
+        "avatar": "coffee.png"
+      },
+      "track_2": {
+        "obj_type": "talk",
+        "speaker_id": 14
+      }
+    },
+    {
+      "obj_type": "2-tracks",
+      "time": "15:30",
+      "track_1": {
+        "obj_type": "talk",
+        "speaker_id": 32
+      },
+      "track_2": {
+        "obj_type": "title",
+        "title": "Coffee Break",
+        "avatar": "coffee.png"
+      }
+    },
+    {
+      "obj_type": "branch_out"
+    },
+    {
+      "obj_type": "event-full",
+      "time": "16:15",
+      "title": "Conference Closing Session",
+      "description": "",
+      "last": true
+    }
+  ]
+}
